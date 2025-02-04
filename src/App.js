@@ -1,17 +1,18 @@
 import React from "react";
 import Post from "./Post";
-
-const tituloZeroUm = "Título Zero Um";
+import Header from "./Header";
 
 function App() {
   return (
     <>
-      <h1>JStack's Blog</h1>
-      <h2>Posts da Semana</h2>
+      <Header>
+        <h2>Posts da Semana</h2>
+      </Header>
 
       <hr></hr>
 
       <Post
+        likes={20}
         post={{
           title: { tituloZeroUm },
           subtitle: "Subtítulo da Notícia 01",
@@ -19,6 +20,7 @@ function App() {
       />
 
       <Post
+        likes={45}
         post={{
           title: { tituloZeroUm },
           subtitle: "Subtítulo da Notícia 01",
@@ -26,6 +28,7 @@ function App() {
       />
 
       <Post
+        likes={50}
         post={{
           title: { tituloZeroUm },
           subtitle: "Subtítulo da Notícia 01",
