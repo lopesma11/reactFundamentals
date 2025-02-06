@@ -12,6 +12,7 @@ function App() {
       subtitle: "Sub01",
       likes: 20,
       read: false,
+      removed: true,
     },
     {
       id: Math.random(),
@@ -19,6 +20,7 @@ function App() {
       subtitle: "Sub02",
       likes: 10,
       read: true,
+      removed: false,
     },
     {
       id: Math.random(),
@@ -26,6 +28,7 @@ function App() {
       subtitle: "Sub03",
       likes: 50,
       read: false,
+      removed: false,
     },
   ]);
 
@@ -42,7 +45,11 @@ function App() {
   };
 
   const handleRemovePost = (postId) => {
-    setPosts((prevState) => prevState.filter((post) => post.id !== postId));
+    setPosts((prevState) =>
+      prevState.map((post) =>
+        post.id === postId ? { ...post, removed: true } : post
+      )
+    );
 
     return removePost;
   };
