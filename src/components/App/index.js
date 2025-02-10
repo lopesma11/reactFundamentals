@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Post from "../Post";
+import Post from "../PostsList/Post";
 import Header from "../Header";
 import { ThemeProvider } from "../../context/ThemeContext";
 import { Title } from "./styles";
