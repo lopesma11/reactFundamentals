@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
-export const Container = styled.header`
+export const Container = styled.footer`
   background: ${({ theme }) => theme.headerBackgroundColor};
-  height: 100px;
+  height: 70px;
   display: flex;
   align-items: center;
   padding: 0 24px;
-  border-radius: 10px;
+  border-radius: 18px;
   justify-content: space-between;
+  margin-top: 24px;
 
   button {
-    font-size: 16px;
     cursor: pointer;
     background: transparent;
     border: none;
