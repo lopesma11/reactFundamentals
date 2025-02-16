@@ -1,29 +1,21 @@
 import React, { useEffect } from "react";
 import Header from "../Header";
-import PostsList from "../PostsList";
+import PostsList from "../../pages/Posts";
 import Footer from "../Footer";
+import Routes from "../../routes";
+import { Link, BrowserRouter } from "react-router-dom";
+import { Nav } from "./styles";
 
-export default class Layout extends React.Component {
-  componentDidMount() {
-    document.addEventListener("scroll", this.handleScrool);
-  }
-
-  componentWillMount() {
-    // console.log("componente vai desmontar...");
-    // document.removeEventListener("scroll", this.handleScrool);
-  }
-
-  handleScrool = () => {
-    console.log("scrollou...");
-  };
-
-  render() {
-    return (
-      <>
-        <Header />
-        <PostsList />
-        <Footer />
-      </>
-    );
-  }
+export default function Layout() {
+  return (
+    <BrowserRouter>
+      <Header />
+      <Nav>
+        <Link to="/">HomePage</Link>
+        <Link to="/posts">Posts</Link>
+      </Nav>
+      <Routes />
+      <Footer />
+    </BrowserRouter>
+  );
 }
