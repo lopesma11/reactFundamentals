@@ -19,12 +19,15 @@ export default class Post extends React.Component {
     const { search } = this.props.location;
     this.queryParams = new URLSearchParams(search);
   }
-  render() {
-    console.log(this.props.match.params);
-    console.log(this.props.location.search);
 
+  handleNavigate = () => this.props.history.push("/posts");
+
+  render() {
     return (
       <>
+        <button onClick={this.handleNavigate}>
+          Voltar para a lista de posts
+        </button>
         <h1>Post Page</h1>
       </>
     );
