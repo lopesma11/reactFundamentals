@@ -13,6 +13,7 @@ export default function Layout() {
       <Nav>
         <Link to="/">HomePage</Link>
         <Link to="/posts">Posts</Link>
+        <Link to="/posts/id">Post</Link>
       </Nav>
       <Routes />
       <Footer />
